@@ -1,0 +1,22 @@
+.group{
+  width: 50%;
+  margin: auto;
+}
+
+.group label, .group input, .group select, .group button{
+  display: block;
+  width: 100%;
+}
+
+.group label, .group .identifier, .group button{
+  margin: .5rem 0;
+}
+
+.group input, .group select{
+  padding: .5rem;
+  box-shadow: 0 0 10px 5px #929292;
+}
+
+.group .identifier span{
+  font-weight: 700;
+}

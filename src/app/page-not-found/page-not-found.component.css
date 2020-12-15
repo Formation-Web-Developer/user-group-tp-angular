@@ -1,0 +1,9 @@
+.error{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 4rem);
+  text-align: center;
+  padding: 1rem;
+}

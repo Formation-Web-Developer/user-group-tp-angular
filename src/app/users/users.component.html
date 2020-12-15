@@ -1,0 +1,23 @@
+<h1>User list</h1>
+
+<div class="users">
+  <div class="user-item" *ngFor="let user of getUsers()">
+    <div class="user">
+      <p><span>Name: </span>{{ user.name }}</p>
+      <p><span>Lastname: </span>{{ user.lastname }}</p>
+      <p><span>Email: </span>{{ user.email }}</p>
+      <p><span>Identifier: </span>{{ user.id }}</p>
+      <p><span>Group: </span>{{ getGroup(user)?.name }}</p>
+      <div class="buttons">
+        <a routerLink="/users/{{ user.id }}" class="btn btn-primary" >Edit</a>
+        <button class="btn btn-danger" (click)="delete(user)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="btn-item">
+  <a class="btn btn-success" routerLink="/users/register">+ New User</a>
+</div>
+
+<router-outlet></router-outlet>

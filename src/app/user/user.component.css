@@ -1,0 +1,22 @@
+.user{
+  width: 50%;
+  margin: auto;
+}
+
+.user label, .user input, .user select, .user button{
+  display: block;
+  width: 100%;
+}
+
+.user label, .user .identifier, .user button{
+  margin: .5rem 0;
+}
+
+.user input, .user select{
+  padding: .5rem;
+  box-shadow: 0 0 10px 5px #929292;
+}
+
+.user .identifier span{
+  font-weight: 700;
+}

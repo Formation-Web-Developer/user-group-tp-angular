@@ -1,0 +1,22 @@
+<h1>Group List</h1>
+
+<div class="groups">
+  <div class="group-item" *ngFor="let group of getGroups()">
+    <div class="group">
+      <p><span>Name: </span>{{ group.name }}</p>
+      <p><span>description: </span>{{ group.description }}</p>
+      <p><span>Identifier: </span>{{ group.id }}</p>
+      <p><span>Users: </span>{{ getUserCount(group.id) }}</p>
+      <div class="buttons">
+        <a routerLink="/groups/{{ group.id }}" class="btn btn-primary" >Edit</a>
+        <button class="btn btn-danger" (click)="delete(group)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="btn-item">
+  <a class="btn btn-success" routerLink="/groups/register">+ New Group</a>
+</div>
+
+<router-outlet></router-outlet>
